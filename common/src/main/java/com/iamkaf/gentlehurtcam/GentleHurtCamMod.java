@@ -1,5 +1,6 @@
 package com.iamkaf.gentlehurtcam;
 
+import com.iamkaf.amber.api.core.v2.AmberInitializer;
 import com.iamkaf.gentlehurtcam.platform.Services;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -18,6 +19,7 @@ public class GentleHurtCamMod {
      */
     public static void init() {
         GentleHurtCamConstants.LOG.info("Initializing {} on {}...", GentleHurtCamConstants.MOD_NAME, Services.PLATFORM.getPlatformName());
+        AmberInitializer.initialize(GentleHurtCamConstants.MOD_ID);
     }
 
     /**

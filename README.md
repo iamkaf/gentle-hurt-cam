@@ -1,14 +1,32 @@
 # Gentle Hurt Cam
 
-Cancels the hurt cam if you take 0 damage.
+A Minecraft mod that cancels the hurt camera effect when you take zero damage.
 
-This repository provides a starting point for creating Minecraft mods that target Fabric, Forge and NeoForge from the same codebase.
-It is adapted from [jaredlll08's MultiLoader-Template](https://github.com/jaredlll08/MultiLoader-Template) and stripped down to a minimal starting point.
+## Features
 
-## Directory layout
+**No More Shake for Zero Damage**
+When you take damage that's fully absorbed (by armor, enchantments, or other protection), the hurt camera shake effect is cancelled. Your screen won't shake when you don't actually take any damage.
 
-- `common/` contains code shared between all loaders.
-- `fabric/`, `forge/` and `neoforge/` contain loader specific entry points and build logic.
-- `buildSrc/` holds the Gradle scripts that wire everything together.
+## Compatibility
 
-Feel free to expand upon this structure to suit the needs of your own mods.
+- Minecraft: 1.21.10
+- Loaders: Fabric, Forge, NeoForge
+- Dependencies: Amber
+
+## How It Works
+
+The mod monitors the hurt camera effect and cancels it when:
+- Your entity was recently hurt (`hurtTime` is active)
+- But the actual damage taken was less than 0.5 hearts (`lastHurt < 0.5`)
+
+This means when you have full netherite armor or other damage reduction that absorbs all incoming damage, your view stays steady.
+
+## Directory Layout
+
+- `common/` contains code shared between all loaders
+- `fabric/`, `forge/`, `neoforge/` contain loader-specific entry points and build logic
+- `buildSrc/` holds the Gradle scripts that wire everything together
+
+## License
+
+MIT
