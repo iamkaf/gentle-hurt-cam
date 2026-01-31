@@ -32,7 +32,7 @@ public class GentleHurtCamMod {
                 player.getName().getString(),
                 entity.getName().getString(),
                 hand,
-                level.dimension().location()
+                level.dimension().identifier()
         );
         return InteractionResult.PASS;
     }
