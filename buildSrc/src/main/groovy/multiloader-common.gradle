@@ -170,13 +170,4 @@ publishing {
             }
         }
     }
-                password = System.getenv("MAVEN_PUBLISH_PASSWORD")
-            }
-        }
-            credentials {
-                username = System.getenv("MAVEN_PUBLISH_USERNAME")
-                password = System.getenv("MAVEN_PUBLISH_PASSWORD")
-            }
-        }
-    }
 }
