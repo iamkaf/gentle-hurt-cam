@@ -9,7 +9,6 @@ When you take damage that's fully absorbed (by armor, enchantments, or other pro
 
 ## Compatibility
 
-- Minecraft: 1.21.10
 - Loaders: Fabric, Forge, NeoForge
 - Dependencies: Amber
 
